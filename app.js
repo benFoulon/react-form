@@ -26,7 +26,9 @@ class App extends React.Component{
         event.preventDefault()
         const tmp = this.state.comment.concat(this.state)
         this.setState({
-            comment : tmp
+            comment : tmp,
+            name : "",
+            message : ""
         })
     }
 
@@ -35,10 +37,10 @@ class App extends React.Component{
             <div className="container">
                 <p>Say something</p>
                 <form onSubmit={this.incrementArr}>
-                    <input type="text" value={this.state.name} placeholder="Your name"
+                    <input className="champ" type="text" value={this.state.name} placeholder="Your name"
                     onChange={this.handleName}>
                     </input>
-                    <textarea cols="30" rows="10" value={this.state.message} placeholder="Your message"
+                    <textarea className="champ" cols="35" rows="10" value={this.state.message} placeholder="Your message"
                     onChange={this.handleMessage}>
                     </textarea>
                     <button type="submit">submit</button>
