@@ -24,8 +24,7 @@ class App extends React.Component{
 
     incrementArr =(event) =>{
         event.preventDefault()
-        const tmp = this.state.comment.concat(this.state.name, this.state.message)
-
+        const tmp = this.state.comment.concat(this.state)
         this.setState({
             comment : tmp
         })
